@@ -1,0 +1,149 @@
+* {
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+}
+
+body {
+  background: #dedede;
+}
+
+img {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 650px) {
+  img {
+    width: 20rem;
+  }
+}
+
+.contents {
+  margin: 20px auto;
+}
+
+.inputs {
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+input,
+button {
+  height: 33px;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+input {
+  width: 170px;
+  margin: 0 5px;
+  border: 0;
+  border-radius: 0;
+}
+
+input:focus {
+  outline-color: #545454;
+}
+
+button {
+  margin: 0 10px;
+  width: 110px;
+  cursor: pointer;
+  border: none;
+  background-color: #4caf50;
+  color: #fff;
+
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+button:active {
+  background-color: #333;
+}
+
+@media (max-width: 650px) {
+  .inputs {
+    display: block;
+  }
+
+  input {
+    padding: 0 1rem 0 1rem;
+  }
+
+  input,
+  button {
+    display: block;
+    margin: 0.8rem auto;
+    width: 15rem;
+  }
+}
+
+.outputs {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#input-errors {
+  color: #ed1c24;
+  font-size: 15px;
+  text-align: center;
+}
+
+.emoji-party {
+  background: url("./images/party.png");
+}
+
+.emoji-sparkle {
+  background: url("./images/sparkle.png");
+}
+
+.emoji {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 5px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emoji-lg {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+#winner-celebrate {
+  margin: 15px;
+}
+
+.tournament__round {
+  display: flex;
+  justify-content: center;
+}
+
+.tournament__match {
+  height: 20px;
+  width: 20px;
+  margin: 5px;
+  border: 2px solid #A8A8A8;
+  background-color: white;
+
+  transition: background-color 0.3s;
+}
+
+.tournament__match--filled {
+  border: 2px solid #656565;
+  background-color: #656565;
+}

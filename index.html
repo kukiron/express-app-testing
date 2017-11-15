@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Knockout Tournament</title>
+    <link rel="stylesheet" href="./client/assets/styles.css">
+  </head>
+  <body>
+    <div>
+      <img src="./client/assets/images/knockout.png" alt="knockout tournament">
+    </div>
+
+    <div class="contents">
+      <div class="inputs">
+        <input id="teamsPerMatch" placeholder="Teams per match" type="number" />
+        <input id="numberOfTeams" placeholder="Number of teams" type="number" />
+        <button id="start">Start</button>
+      </div>
+
+      <div class="outputs">
+        <img id="spinner" src="./client/assets/images/spinner.gif" style="display:none" alt="Loading spinner" />
+        <div id="input-errors"></div>
+        <div id="winner-celebrate" style="display:none">
+          <i class="emoji emoji-lg emoji-sparkle"></i>
+          <i class="emoji emoji-lg emoji-party"></i>
+          <span id="winner"></span>
+          <i class="emoji emoji-lg emoji-party"></i>
+          <i class="emoji emoji-lg emoji-sparkle"></i>
+        </div>
+        <div id="tournament" class="result"></div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="./client/tournament/match.js"></script>
+    <script type="text/javascript" src="./client/tournament/render.js"></script>
+    <script type="text/javascript" src="./client/tournament/teams-manager.js"></script>
+    <script type="text/javascript" src="./client/tournament/rounds-manager.js"></script>
+    <script type="text/javascript" src="./client/tournament/tournament.js"></script>
+    <script type="text/javascript" src="./client/utils/constants.js"></script>
+    <script type="text/javascript" src="./client/utils/tournament-api.js"></script>
+    <script type="text/javascript" src="./client/utils/selectors.js"></script>
+    <script type="text/javascript" src="./client/utils/errors.js"></script>
+    <script type="text/javascript" src="./client/index.js"></script>
+  </body>
+</html>
