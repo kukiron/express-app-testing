@@ -33,6 +33,7 @@ class Render {
   showWinner(winner) {
     selectors.winnerElem.innerHTML = winner;
     selectors.winnerCelebrate.style.display = "";
+    selectors.body.style.background = "url('client/assets/images/confetti.gif'), url('client/assets/images/background.png'), #f5f5f5";
     this.hideSpinner();
   }
 
@@ -49,9 +50,13 @@ class Render {
     selectors.spinner.style.display = "none";
   }
 
+  celebration() {
+  }
+
   reset() {
     selectors.winnerElem.innerHTML = "";
     selectors.winnerCelebrate.style.display = "none";
+    selectors.body.style.background = "url('client/assets/images/background.png'), #f5f5f5";
 
     while (this.tournamentBody.firstChild) {
       this.tournamentBody.removeChild(this.tournamentBody.firstChild);

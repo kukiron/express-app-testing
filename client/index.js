@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   selectors.numberOfTeams.addEventListener("keyup", submitOnEnter);
   selectors.startButton.addEventListener(
     "click",
-    handleTournament.bind(this),
+    handleTournament,
     false
   );
 });

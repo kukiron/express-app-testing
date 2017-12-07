@@ -4,5 +4,6 @@ const CONSTANTS = {
   NUMBER_OF_TEAMS_ID: "numberOfTeams",
   TEAMSCORES: "teamScores",
   TOURNAMENT_ID: "tournament",
-  WINNER_ID: "winner"
+  WINNER_ID: "winner",
+  SPINNER_ID: "spinner"
 };

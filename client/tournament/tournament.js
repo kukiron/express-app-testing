@@ -6,9 +6,9 @@ class Tournament {
 
   async runSimulation() {
     const render = new Render(this.getRounds());
-    const numberOfRounds = this.getNumberOfRounds();
+    const numberOfRounds = this.getRounds().length;
 
-    if (numberOfRounds == null || numberOfRounds <= 0) {
+    if (numberOfRounds === 0 || numberOfRounds == null) {
       render.renderMsg(ERRORS.INVALID_ROUND_NUMBER);
     } else {
       render.drawMatches();
@@ -36,7 +36,7 @@ class Tournament {
   }
 
   getRounds() {
-    let roundsArr = [];
+    let rounds = [];
     let numberOfTeams = this.numberOfTeams;
 
     while (numberOfTeams % this.teamsPerMatch === 0) {
@@ -46,24 +46,9 @@ class Tournament {
       for (let i = 0; i < numberOfTeams; i++) {
         round.push(i);
       }
-      roundsArr.push(round);
+      rounds.push(round);
     }
 
-    return roundsArr;
-  }
-
-  getNumberOfRounds() {
-    let rounds = 1;
-    let teamCount;
-
-    for (
-      teamCount = this.teamsPerMatch;
-      teamCount < this.numberOfTeams;
-      teamCount *= this.teamsPerMatch
-    ) {
-      rounds++;
-    }
-
-    return teamCount === this.numberOfTeams ? rounds : null;
+    return rounds;
   }
 }
