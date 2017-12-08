@@ -19,9 +19,7 @@ class TournamentAPI {
 
     try {
       let response = await fetch(req);
-      const what = await response.json();
-      console.log(what);
-      return what;
+      return await response.json();
     } catch (err) {
       return err;
     }
@@ -45,9 +43,7 @@ class TournamentAPI {
 
     try {
       let response = await fetch(req);
-      const what = await response.json();
-      console.log(what);
-      return what;
+      return await response.json();
     } catch (err) {
       return err;
     }
