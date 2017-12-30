@@ -1,11 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   selectors.teamsPerMatch.addEventListener("keyup", submitOnEnter);
   selectors.numberOfTeams.addEventListener("keyup", submitOnEnter);
-  selectors.startButton.addEventListener(
-    "click",
-    handleTournament,
-    false
-  );
+  selectors.startButton.addEventListener("click", handleTournament, false);
 });
 
 function submitOnEnter(e) {
